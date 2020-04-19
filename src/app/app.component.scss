@@ -1,0 +1,53 @@
+
+.img-brand-logo {
+  width: 80px;
+}
+.fa {
+  margin: 0px 10px;
+}
+.body {
+  position: relative;
+  top: 80px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.header {
+  padding: 0px;
+  margin: 0px;
+  height: 80px;
+  display: flex;
+  background-color: #3a4b62;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1200;
+  box-shadow: 0px 0px 10px black;
+}
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.menu-list-item,
+.user-info {
+  margin: 0 20px;
+  text-shadow: 0px 3px 5px black;
+}
+.user-info {
+  font-size: large;
+  color: #fcbb6d;
+  font-weight: bold;
+}
+.menu-list-item:hover {
+  color: #fcbb6d;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.active {
+  color: #fcbb6d;
+  font-weight: bold;
+}

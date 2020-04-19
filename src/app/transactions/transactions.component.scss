@@ -1,0 +1,19 @@
+.card {
+    margin: 20px;
+    padding: 20px;
+}
+
+input[type="file" i] {
+    height: 38px;
+    background-color: #18a2b8;
+    padding: .55rem .75rem;
+    border-radius: .25rem;
+    font: bold 13px system-ui;
+    color: white;
+}
+
+.noData{
+    text-align: left;
+    padding: 0px 20px;
+    color: darkslategray;
+}

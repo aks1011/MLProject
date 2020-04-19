@@ -1,0 +1,26 @@
+<div class='card'>
+    <table class='table table-hover' *ngIf='projectList.length > 0; else noData'>
+        <thead>
+            <tr>
+                <th scope='col'>#</th>
+                <th scope='col'>Project name</th>
+                <th scope='col'>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let project of projectList; index as i'>
+                <th scope='row'>{{project.id}}</th>
+                <td>{{project.projectName}}</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-warning" (click)='new(project.id)'>New</button>
+                        <button type="button" class="btn btn-info" (click)='view(project.id)'>View</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noData>
+        <span class="noData">No data found.</span>
+    </ng-template>
+</div>

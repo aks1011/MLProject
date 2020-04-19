@@ -1,0 +1,49 @@
+<div class='card'>
+    <div class='card-body row'>
+        <div class='input-group col-7'>
+            <select class='custom-select' id='inputGroupSelect01' (change)="selectedQuestion($event)">
+                <option selected>Questions</option>
+                <option value='1'>Question 1</option>
+                <option value='2'>Question 2</option>
+                <option value='3'>Question 3</option>
+                <option value='4'>Question 4</option>
+            </select>
+        </div>
+        <div class='col-4'>
+            <form>
+                <div class='form-group'>
+                    <input type='file' class='form-control-file' id='exampleFormControlFile1' (change)="selectedFile($event)">
+                </div>
+            </form>
+        </div>
+        <div class='col-1'>
+            <button type='button' class='btn btn-info' (click)="onSubmit()">Submit</button>
+        </div>
+    </div>
+
+    <table class='table table-hover' *ngIf='transactionList.length > 0; else noData'>
+        <thead>
+            <tr>
+                <th scope='col'>#</th>
+                <th scope='col'>Question</th>
+                <th scope='col'>Document</th>
+                <th scope='col'>Answer</th>
+                <th scope='col'>Rank</th>
+                <th scope='col'>Interpretation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let transaction of transactionList; index as i'>
+                <th scope='row'>{{transaction.id}}</th>
+                <td>{{transaction.question}}</td>
+                <td>{{transaction.document}}</td>
+                <td>{{transaction.answer}}</td>
+                <td>{{transaction.rank}}</td>
+                <td>{{transaction.interpretation}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noData>
+        <span class="noData">No data found.</span>
+    </ng-template>
+</div>
